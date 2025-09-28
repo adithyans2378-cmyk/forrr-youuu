@@ -1,0 +1,151 @@
+/* --- Basic Reset and Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    /* Ensures the website fills the entire viewport */
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+/* --- Container for centering content --- */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 90%; /* Responsive width for phones */
+    width: 500px;
+    margin: 20px;
+}
+
+/* --- Typography Styles --- */
+.title {
+    font-family: 'Pacifico', cursive; /* A romantic, script font */
+    color: #d9534f;
+    margin-bottom: 20px;
+    font-size: 1.8rem; /* Responsive font size */
+}
+
+.surprise-title {
+    font-family: 'Pacifico', cursive;
+    color: #e74c3c;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: pulse 1.5s infinite; /* Heartbeat animation */
+}
+
+.love-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.surprise-text {
+    font-size: 1.3rem;
+    color: #34495e;
+    margin-top: 20px;
+}
+
+.signature {
+    margin-top: 30px;
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+/* --- Button Style --- */
+.btn {
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #eb9316;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* --- Hidden/Display Class --- */
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/* --- Hearts Animation --- */
+.hearts-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 2rem;
+}
+
+.heart-emoji {
+    display: inline-block;
+    animation: float-up 3s ease-out infinite;
+}
+
+.hearts-container span:nth-child(2) {
+    animation-delay: 0.5s; /* Stagger the animation */
+}
+
+.hearts-container span:nth-child(3) {
+    animation-delay: 1s;
+}
+
+
+/* --- CSS Keyframe Animations --- */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float-up {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    50% { transform: translateY(-10px) scale(1.1); }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* --- Media Query for smaller screens (optional, but good practice) --- */
+@media (max-width: 480px) {
+    .container {
+        padding: 25px 15px;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+    .surprise-title {
+        font-size: 2.5rem;
+    }
+    .love-text {
+        font-size: 1rem;
+    }
+}
